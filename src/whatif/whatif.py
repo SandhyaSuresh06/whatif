@@ -300,7 +300,11 @@ class Model():
 #        """
 #        return str({key: val for (key, val) in vars(self).items() if key[0] != '_'})
 
-
+    def __str__(self):
+        """
+        Print dictionary of object attributes that don't include an underscore as first char
+        """
+        return str({key: val for (key, val) in vars(self).items() if key[0] != '_'})
 
 
 
